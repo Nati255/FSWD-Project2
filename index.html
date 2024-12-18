@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Comatible" content="ie=edge">
+    <title>PrimeTech Store</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!---navbar -->
+    <nav class="navbar">
+        <div class="navbar-center">
+          <img src="images/logo2.jpeg" alt="store logo">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+            <li><a href="#cart" class="nav-link">Cart</a></li>
+          </ul>
+          <div class="cart-btn">
+            <span class="nav-icon">
+              <i class="fas fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div>
+        </div>
+        <span class="hamburger">
+          <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+    <!---end of navbar-->
+    <!--hero-->
+    <header class="hero">
+        <div class="banner">
+            <h1 class="banner-title">Electronics collection</h1>
+            <button class="banner-btn">shop now</button>
+        </div>
+    </header>
+    <!---end of hero-->  
+    <!-- Store Sections -->
+    <section id="products" class="store-sections">
+        <h2 class="section-title">What We Have in Store</h2>
+        <div class="products-container">
+            <div class="product-column">
+                <h3>Phones</h3>
+                <p>Explore our wide selection of smartphones from top brands.</p>
+                <button class="banner-btn">View Phones</button>
+            </div>
+            <div class="product-column">
+                <h3>Computers</h3>
+                <p>Find high-performance laptops and desktops for every need.</p>
+                <button class="banner-btn">View Computers</button>
+            </div>
+            <div class="product-column">
+                <h3>Gaming Consoles</h3>
+                <p>Check out the latest Xbox, PS5, and other gaming gadgets.</p>
+                <button class="banner-btn">View more</button>
+            </div>
+        </div>
+    </section>
+    <!-- End of Store Sections -->
+    <!---phone section-->
+    <section id="phones" class="phones-section">
+        <h2 class="section-title">Explore Our Phones Collection</h2>
+        <div class="phones-description">
+            <p>Discover the latest models from top brands like Apple, Samsung, and more. Whether you're looking for the new iPhone, the latest Samsung Galaxy, or cutting-edge smartphones from other brands, we have it all. Stay ahead with the best in mobile technology.</p>
+        </div>
+        <button class="banner-btn" onclick="window.location.href='#products'">View All Phones</button>
+    </section>
+    <!-- End of phone Sections -->
+     <!---computers section-->
+    <section id="computers" class="computers-section">
+        <h2 class="section-title">Explore Our Computers Collection</h2>
+        <div class="computers-description">
+            <p>Explore a wide range of high-performance laptops and desktops from top brands like Dell, HP, MacBook, and more. Whether you're a gamer, a student, or a professional, we have the right computer for you. Get the power, speed, and reliability you need!</p>
+        </div>
+        <button class="banner-btn" onclick="window.location.href='#products'">View All Computers</button>
+    </section>
+    <!-- End of computers Sections -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><strong>Phone&nbsp;&nbsp;&nbsp;:</strong> (123) 456-7890</li>
+                    <li><strong>Email&nbsp;&nbsp;&nbsp;:</strong> support@primetechstore.com</li>
+                    <li><strong>Address&nbsp;&nbsp;&nbsp;:</strong> 123 Tech St, Silicon Valley, CA</li>
+                </ul>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="footer-form">
+                <h4>Send us a message</h4>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="footer-btn">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 PrimeTech Store | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script  src="app.js"></script> 
+</body>
+</html>

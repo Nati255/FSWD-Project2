@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: enter;
+    background: rgb(231, 226, 221);
+    z-index: 1;
+}
+.navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.navbar-center img {
+    position: absolute;
+    left: 30px;
+    height: 30px;
+    width: 300px;
+}
+.nav-icon {
+    font-size: 1.5rem;
+}
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+}
+.cart-btn .nav-icon {
+    font-size: 1.5rem;
+}
+.cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.nav-link {
+    text-decoration: none;
+    color: var(--mainBlack);
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+}
+  
+.nav-link:hover {
+    color: var(--primaryColor);
+}
+  /* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+  /* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .navbar-center {
+      justify-content: space-between;
+      position: relative;
+    }
+    /* Hide nav links by default */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background: var(--mainWhite);
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      padding-top: 3rem;
+      z-index: 1000;
+    }  
+    /* Show nav links when the menu is toggled */
+    .nav-links.show {
+      display: flex;
+    } 
+    .nav-link {
+      margin: 1rem 0;
+      text-align: left;
+      padding-left: 1.5rem;
+    }  
+    /* Hamburger icon visible */
+    .hamburger {
+      display: block;
+    }  
+    /* Center logo */
+    .navbar-center img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }  
+    /* Cart icon on the right */
+    .cart-btn {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+}  /* --------------- End of Navbar ---------------- */
+.hero {
+    min-height: calc(100vh - 60px);
+    background: url("./images/hero-bcg.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+}
+.banner-title {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+    animation: slideUp 1s ease-out;
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.banner-btn {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+}
+.banner-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+}
+  /* --------------- End of Hero ---------------- */
+  /* Store Sections */
+.store-sections {
+    padding: 4rem 1.5rem;
+    background: var(--mainGrey);
+    text-align: center;
+    border-bottom: 3px solid var(--primaryColor);
+}
+.store-sections h2{
+    margin-bottom: 67px;
+}  
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--mainBlack);
+    text-transform: uppercase;
+}
+  
+.products-container {
+    display: flex;
+    justify-content: space-between; /* or space-evenly */
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.product-column {
+    background: var(--mainWhite);
+    padding: 2rem;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ensures button stays at the bottom */
+    justify-content: space-between; /* Ensures content is evenly spaced */
+    height: 300px; /* Ensures uniform height for all columns */
+}
+
+.product-column h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primaryColor);
+}
+
+.product-column p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--mainBlack);
+}
+
+.banner-btn {
+    align-self: center; /* Center the button horizontally */
+}
+/* --------------- End of store section---------------- */
+/* Phone Section */
+.phones-section {
+    padding: 4rem 1.5rem;
+    background: var(--mainGrey);
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 3px solid var(--primaryColor); /* Adds a nice border to the section */
+}
+
+.phones-section:hover {
+    background: var(--mainWhite); /* Subtle effect when hovered */
+}
+
+.phones-description {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: var(--mainBlack);
+    line-height: 1.6;
+}
+
+.phones-description p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+}
+/* --------------- End of phone section ---------------- */
+
+/* Computers Section */
+.computers-section {
+    padding: 4rem 1.5rem;
+    background: var(--mainGrey);
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 3px solid var(--primaryColor);
+}
+
+.computers-section:hover {
+    background: var(--mainWhite); /* Subtle effect when hovered */
+}
+
+.computers-description {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: var(--mainBlack);
+    line-height: 1.6;
+}
+
+.computers-description p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    
+}
+/* Footer */
+.footer {
+    background: var(--mainBlack);
+    color: var(--mainWhite);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-social {
+    flex: 1;
+    display: flex;
+    gap: 5.5rem;
+    align-items: center;
+    margin: auto;
+}
+
+.social-icon {
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--primaryColor);
+}
+
+.footer-contact,
+.footer-form {
+    flex: 1;
+    text-align: left;
+    max-width: 350px;
+    
+}
+
+.footer-contact h4,
+.footer-form h4 {
+    color: var(--primaryColor);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.footer-contact ul {
+    margin-top: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    margin-bottom: 4.5rem;
+
+}
+
+.footer-contact strong {
+    color: var(--primaryColor);
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--mainGrey);
+    border-radius: 4px;
+    background: var(--mainWhite);
+    color: var(--mainBlack);
+}
+
+.footer-form button {
+    padding: 1rem 3rem;
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.footer-form button:hover {
+    background: var(--mainBlack);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .footer-contact,
+    .footer-form {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .footer-contact ul {
+        padding-left: 0;
+    }
+
+    .footer-bottom {
+        margin-top: 1.5rem;
+    }
+}
